@@ -9,4 +9,19 @@ class GuestTest < MiniTest::Test
   def setup
     @guest1 = Guest.new("Ruby", 50)
     @guest2 = Guest.new("Sapphire", 30)
+    @song1 = Song.new("Happy Birthday")
+    @song2 = Song.new("Bohemian Rhapsody")
   end
+
+  def test_guest_has_name()
+    assert_equal("Ruby", @guest1.name())
+  end
+
+  def test_customer_has_money()
+    assert_equal(30, @guest2.wallet())
+  end
+
+
+
+
+end
