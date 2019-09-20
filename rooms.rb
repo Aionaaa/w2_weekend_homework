@@ -1,6 +1,6 @@
 class Room
 
-  attr_reader :name
+  attr_reader :name, :guests
 
   def initialize(name)
     @name = name
@@ -20,7 +20,9 @@ class Room
     @guests.push(guest)
   end
 
-
+  def room_can_remove_guests(guest)
+    @guests.delete(guest)
+  end
 
 
 
