@@ -24,7 +24,9 @@ class Room
     @guests.delete(guest)
   end
 
-
+  def room_can_add_songs(song)
+    @songs.push(song)
+  end
 
 
 
